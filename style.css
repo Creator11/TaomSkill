@@ -19,6 +19,7 @@ section.header {
 .Logo {
   max-width: 70px;
   max-height: 70px;
+  cursor: pointer;
 }
 .Logo-container p {
   font-size: 18px;
@@ -43,6 +44,11 @@ section.header {
   text-decoration: none;
   font-weight: bold;
   cursor: pointer;
+  padding: 5px;
+}
+.navbar__login:hover,
+.navbar__courses:hover {
+  border-bottom: 3px solid #006cf4;
 }
 
 /* Header */
@@ -52,13 +58,14 @@ section.header {
   align-items: center;
   position: relative;
   overflow: hidden;
+  z-index: 10;
 }
 
 .header__content::after {
   content: " ";
   position: absolute;
   right: 7rem;
-  z-index: 1;
+  z-index: -1;
   background-image: url(./img/header-img.png);
   background-repeat: no-repeat;
   background-position: right;
@@ -77,7 +84,7 @@ section.header {
 .header__text-title {
   font-size: 60px;
   font-weight: bold;
-  margin-bottom: 5px;
+  margin-bottom: 15px;
 }
 
 .header__text-subtitle {
@@ -89,9 +96,15 @@ section.header {
   text-decoration: none;
   font-weight: bold;
   font-size: 19px;
-  border: 1px solid gray;
-  padding: 10px;
+  padding: 14px 49px;
+  cursor: pointer;
   border-radius: 26px;
+  box-shadow: 0.3em 0.5em 25px rgb(122 122 122 / 50%);
+}
+
+.header__text-button:hover {
+  background-color: #006cf4;
+  color: white;
 }
 /* Slider */
 .slider {
@@ -166,6 +179,14 @@ section.header {
   text-decoration: none;
   color: black;
   margin: 0px 20px;
+  font-weight: bold;
+  padding: 9px;
+  border-radius: 14px;
+}
+.slider__link:hover {
+  color: #006cf4;
+  box-shadow: 0.3em 0.5em 25px rgb(122 122 122 / 50%);
+  background-color: white;
 }
 .section__slider-box:active {
   cursor: grabbing;
@@ -215,6 +236,10 @@ section.regular.slider.slider__container.slick-initialized.slick-slider {
   border-radius: 20px;
   font-weight: bold;
   padding: 1px 35px 8px;
+}
+.marketing__button:hover {
+  background: white;
+  color: #006cf4;
 }
 .download {
   height: 100vh;
